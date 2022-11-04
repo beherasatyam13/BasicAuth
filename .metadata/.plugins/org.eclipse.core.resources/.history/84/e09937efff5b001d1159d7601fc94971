@@ -1,0 +1,24 @@
+package Authentication;
+
+import org.junit.Test;
+import static io.restassured.RestAssured.*;
+Run All
+public class BasicAuth {
+	
+	
+	@Test
+	
+	
+ public void basicAuth()
+ {
+   baseURI = "https://github.com/";
+   
+   given().auth().basic(" "," ")
+   .when().get("/login")
+   .then().log().all();
+	
+
+}
+
+	
+	}

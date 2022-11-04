@@ -1,0 +1,19 @@
+package Runner;
+
+import io.cucumber.testng.CucumberOptions;
+
+public class RunnerTest {
+
+	
+	@CucumberOptions(
+			
+			features = {"./src/test/java"},
+			glue = "Stepdef",
+			dryRun = false,
+			monochrome = true,
+			plugin = {
+					"pretty"
+			}
+			
+			)
+}

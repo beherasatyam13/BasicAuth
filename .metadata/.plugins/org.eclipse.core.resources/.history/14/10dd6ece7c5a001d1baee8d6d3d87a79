@@ -1,0 +1,21 @@
+package CurdOperation;
+
+import org.json.simple.JSONObject;
+
+public class PostMethod 
+{
+	public void name() {
+		
+	
+JSONObject obj=new JSONObject();
+
+obj.put("date_and_time", "2022-10-31T05:04:30.066Z");
+obj.put("email", "beherasatyam13@gmail.com");
+obj.put("id", 2);
+obj.put("name", "Satyam");
+obj.put("phone", 63708090);
+obj.put("price", 2000);
+obj.put("qty", 1);
+
+}
+	}

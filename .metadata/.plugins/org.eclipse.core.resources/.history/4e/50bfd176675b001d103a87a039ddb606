@@ -1,0 +1,6 @@
+Feature: User able to fetch the data in database
+Scenario: User able to post the data
+Given User able to retrive data in json format
+When User post the data by using api "http://localhost:8080/sales"
+Then User validate the post StatusCode 200
+

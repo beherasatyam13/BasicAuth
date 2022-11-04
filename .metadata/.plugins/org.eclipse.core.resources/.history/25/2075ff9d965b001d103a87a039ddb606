@@ -1,0 +1,7 @@
+Feature: User is able fetch name data in database
+
+@GetByname
+Scenario: User want to retrive the name of the data from database
+When User want to retrive name using URI "http://localhost:8080/sales/name/satyam"
+
+And User want to verify status code is 200

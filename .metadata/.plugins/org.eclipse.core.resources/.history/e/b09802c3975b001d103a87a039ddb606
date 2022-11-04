@@ -1,0 +1,7 @@
+Feature: Get By name Request
+
+Scenario: User want to read the data by using name from database
+When User want to read name by using id URI "http://localhost:8080/sales?name=satyam"
+
+And  User want to verify status code is 200
+

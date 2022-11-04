@@ -1,0 +1,30 @@
+package Stepdef;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class PostforOwner {
+	
+	
+	@Given("User want to pass data into Database")
+	public void user_want_to_pass_data_into_database() {
+	    
+	}
+
+	@When("User want to Pass data by using URI {string}")
+	public void user_want_to_pass_data_by_using_uri(String string) {
+	    
+	}
+
+	@Then("User want to Validate status line {string}")
+	public void user_want_to_validate_status_line(String string) {
+	    
+	}
+
+	@Then("User want to validate status Code {int}")
+	public void user_want_to_validate_status_code(Integer int1) {
+	    
+	}
+
+}

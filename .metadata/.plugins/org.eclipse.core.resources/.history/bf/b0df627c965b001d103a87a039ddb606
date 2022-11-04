@@ -1,0 +1,7 @@
+Feature: Get By name Request
+
+@GetByname
+Scenario: User want to retrive the name of the data from database
+When User want to retrive name using URI "http://localhost:8080/sales/name/satyam"
+Then User want to verify name status line "HTTP/1.1 200"
+And User want to verify status code is 200

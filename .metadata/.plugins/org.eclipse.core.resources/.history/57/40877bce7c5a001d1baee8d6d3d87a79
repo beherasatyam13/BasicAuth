@@ -1,0 +1,34 @@
+package CurdOperation;
+
+import org.json.simple.JSONObject;
+import org.junit.Test;
+
+import io.restassured.RestAssured.*;
+import io.restassured.http.ContentType;
+
+public class  PostMethod 
+{
+	@Test
+	public void name() {
+		
+	
+JSONObject obj=new JSONObject();
+
+obj.put("date_and_time", "2022-10-31T05:04:30.066Z");
+obj.put("email", "beherasatyam13@gmail.com");
+obj.put("id", 2);
+obj.put("name", "Satyam");
+obj.put("phone", 63708090);
+obj.put("price", 2000);
+obj.put("qty", 1);
+
+ given()
+.contentType(ContentType.JSON)
+.body(obj)
+.when()
+.post("/sales").then()
+.assertThat().statusCode(200)
+.log().all();
+	}
+	}
+	

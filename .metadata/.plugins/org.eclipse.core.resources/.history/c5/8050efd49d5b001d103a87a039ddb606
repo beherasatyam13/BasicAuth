@@ -1,0 +1,37 @@
+package CurdOperation;
+
+import static io.restassured.RestAssured.given;
+
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+
+import io.restassured.http.ContentType;
+
+
+
+public class PostRequestforStock {
+	
+	@Test
+	public void PostRequestforStock() {
+		
+		JSONObject obj=new JSONObject();
+		
+		obj.put("category", "MacBook");
+		obj.put("product_name", "APPLE");
+		obj.put("quantity", "20");
+		obj.put("reorder_level", "5");
+		obj.put("reorder_quantity", "2");
+		obj.put("total_cost", "15000");
+		obj.put("unit_price", "2000");
+		
+		given()
+		.contentType(ContentType.JSON)
+		.body(obj)
+		.when()
+		.post("/stock").then()
+		.assertThat().statusCode(200)
+		.log().all();
+		
+	}
+
+}
